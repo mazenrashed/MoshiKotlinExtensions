@@ -7,7 +7,7 @@ internal class MoshiExtensionUnitTest {
     private val studentJson = "{\"name\":\"mazen\"}"
     private val receiptJson = "{\"total\": 19}"
     private val student: Student = Student("mazen")
-    val studentsJson = "[{\"name\":\"mazen1\"},{\"name\":\"mazen2\"}]"
+    private val studentsJson = "[{\"name\":\"mazen1\"},{\"name\":\"mazen2\"}]"
     private val students = listOf(Student("mazen1"), Student("mazen2"))
 
     @Test
