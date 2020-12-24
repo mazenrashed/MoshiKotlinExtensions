@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.mazenrashed.lib.MoshiExtensionUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-24T21:55:38" hostname="mazen-G3-3590" time="0.236">
+  <properties/>
+  <testcase name="test_deserialize_object" classname="com.mazenrashed.lib.MoshiExtensionUnitTest" time="0.236"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
