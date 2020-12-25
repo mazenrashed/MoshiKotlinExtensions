@@ -1,8 +1,24 @@
 # Moshi Kotlin Extensions
 Kotlin extensions for Moshi, Make every thing you want with Moshi in just one line.
 
-## Samples
-### We have "Student" class to explan the samples
+
+###  Add the JitPack repository to your build file
+```groovy
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+### Add dependency
+```groovy
+dependencies {
+    implementation 'com.github.mazenrashed:MoshiKotlinExtensions:${LAST_VERSION}'
+}
+```
+
+#### We have "Student" class to explan the samples
 ```kotlin
 data class Student(var name: String)
 ```
