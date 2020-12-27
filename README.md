@@ -48,7 +48,7 @@ val serializedObject = student.serialize()
 
 ### Check if you can convert json to a particular type
 ```kotlin
-val carConvertStudentJsonToStudent: Boolean = studentJson.canConvertTo(Student::class.java) //true
+val canConvertStudentJsonToStudent: Boolean = studentJson.canConvertTo(Student::class.java) //true
 ```
 
 ### If you have a custom Moshi instance you want to use it (For example: To apply Moshi adapters)
