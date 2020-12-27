@@ -1,5 +1,8 @@
 # Moshi Kotlin Extensions
+
 Kotlin extensions for Moshi, Make every thing you want with Moshi in just one line.
+
+[![](https://jitpack.io/v/mazenrashed/MoshiKotlinExtensions.svg)](https://jitpack.io/#mazenrashed/MoshiKotlinExtensions)
 
 
 ###  Add the JitPack repository to your build file
@@ -18,7 +21,7 @@ dependencies {
 }
 ```
 
-#### We have "Student" class to explan the samples
+#### We have "Student" class to explan the examples
 ```kotlin
 data class Student(var name: String)
 ```
