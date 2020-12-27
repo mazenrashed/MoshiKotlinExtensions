@@ -16,7 +16,6 @@ repositories {
 dependencies {
     testImplementation(kotlin("test-junit"))
     implementation("com.squareup.moshi:moshi-kotlin:1.11.0")
-        implementation("com.mazenrashed:moshi-kotlin-extensions:1.0.0")
 }
 
 tasks.test {
