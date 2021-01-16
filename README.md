@@ -3,7 +3,7 @@
 Kotlin extensions for Moshi, Make every thing you want with Moshi in just one line.
 
 [![](https://jitpack.io/v/mazenrashed/MoshiKotlinExtensions.svg)](https://jitpack.io/#mazenrashed/MoshiKotlinExtensions)
-
+[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-Moshi%20Kotlin%20Extensions-green.svg?style=flat )]( https://android-arsenal.com/details/1/8216 )
 
 ###  Add the JitPack repository to your build file
 ```groovy
