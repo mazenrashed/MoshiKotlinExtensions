@@ -1,9 +1,11 @@
 package com.mazenrashed.moshikotlinextensions
 
 import com.squareup.moshi.JsonAdapter
+import com.squareup.moshi.JsonDataException
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import kotlin.jvm.Throws
 
 object MoshiExtensions {
     var moshi: Moshi = Moshi.Builder()
@@ -15,11 +17,13 @@ object MoshiExtensions {
     }
 }
 
+@Throws(JsonDataException::class)
 inline fun <reified T> String.deserialize(): T? {
     val jsonAdapter = MoshiExtensions.moshi.adapter(T::class.java)
     return jsonAdapter.fromJson(this)
 }
 
+@Throws(JsonDataException::class)
 inline fun <reified T> String.deserializeList(): List<T>? {
     val type = Types.newParameterizedType(MutableList::class.java, T::class.java)
     val jsonAdapter: JsonAdapter<List<T>> = MoshiExtensions.moshi.adapter(type)
