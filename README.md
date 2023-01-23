@@ -21,7 +21,7 @@ dependencies {
 }
 ```
 
-#### We have "Student" class to explan the examples
+#### We have "Student" as example
 ```kotlin
 data class Student(var name: String)
 ```
