@@ -18,22 +18,22 @@ object MoshiExtensions {
 }
 
 @Throws(JsonDataException::class)
-inline fun <reified T> String.deserialize(): T? {
-    val jsonAdapter = MoshiExtensions.moshi.adapter(T::class.java)
+inline fun <reified T> String.deserialize(moshi: Moshi? = null): T? {
+    val jsonAdapter = (moshi ?: MoshiExtensions.moshi).adapter(T::class.java)
     return jsonAdapter.fromJson(this)
 }
 
 @Throws(JsonDataException::class)
-inline fun <reified T> String.deserializeList(): List<T>? {
+inline fun <reified T> String.deserializeList(moshi: Moshi? = null): List<T>? {
     val type = Types.newParameterizedType(MutableList::class.java, T::class.java)
-    val jsonAdapter: JsonAdapter<List<T>> = MoshiExtensions.moshi.adapter(type)
+    val jsonAdapter: JsonAdapter<List<T>> = (moshi ?: MoshiExtensions.moshi).adapter(type)
     return jsonAdapter.fromJson(this)
 }
 
 @Suppress("CheckResult")
-fun String.canConvertTo(type: Class<*>): Boolean {
+fun String.canConvertTo(type: Class<*>, moshi: Moshi? = null): Boolean {
     return try {
-        val jsonAdapter = MoshiExtensions.moshi.adapter(type)
+        val jsonAdapter = (moshi ?: MoshiExtensions.moshi).adapter(type)
         jsonAdapter.fromJson(this)
         true
     } catch (exception: Exception) {
@@ -42,7 +42,7 @@ fun String.canConvertTo(type: Class<*>): Boolean {
     }
 }
 
-inline fun <reified T> T.serialize(): String {
-    val jsonAdapter = MoshiExtensions.moshi.adapter(T::class.java)
+inline fun <reified T> T.serialize(moshi: Moshi? = null): String {
+    val jsonAdapter = (moshi ?: MoshiExtensions.moshi).adapter(T::class.java)
     return jsonAdapter.toJson(this)
 }
